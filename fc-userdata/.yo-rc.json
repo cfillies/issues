@@ -1,0 +1,13 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "isCreatingSolution": true,
+    "environment": "spo",
+    "version": "1.7.0",
+    "libraryName": "fc-userdata",
+    "libraryId": "1c4e4b0c-1331-4a96-9b0a-ac484878b723",
+    "packageManager": "npm",
+    "isDomainIsolated": false,
+    "componentType": "extension",
+    "extensionType": "FieldCustomizer"
+  }
+}

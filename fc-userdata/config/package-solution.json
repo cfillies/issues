@@ -1,0 +1,26 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "fc-userdata-client-side-solution",
+    "id": "1c4e4b0c-1331-4a96-9b0a-ac484878b723",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false,
+    "features": [
+      {
+        "title": "Application Extension - Deployment of custom action.",
+        "description": "Deploys a custom action with ClientSideComponentId association",
+        "id": "3cd674af-ef36-43da-96e2-f1946ed200a1",
+        "version": "1.0.0.0",
+        "assets": {
+          "elementManifests": [
+            "elements.xml"
+          ]
+        }
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/fc-userdata.sppkg"
+  }
+}

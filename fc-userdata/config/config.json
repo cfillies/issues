@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "user-data-field-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/userData/UserDataFieldCustomizer.js",
+          "manifest": "./src/extensions/userData/UserDataFieldCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "UserDataFieldCustomizerStrings": "lib/extensions/userData/loc/{locale}.js"
+  }
+}
