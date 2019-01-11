@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "sp-taxonomy-449-client-side-solution",
+    "id": "b2ad652e-5281-40ef-8faa-4c8bfd4b47fe",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true
+  },
+  "paths": {
+    "zippedPackage": "solution/sp-taxonomy-449.sppkg"
+  }
+}
