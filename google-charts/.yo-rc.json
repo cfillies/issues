@@ -1,0 +1,11 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "isCreatingSolution": true,
+    "environment": "spo",
+    "version": "1.7.1",
+    "libraryName": "google-charts",
+    "libraryId": "37b773c9-5310-4052-9e92-d0ee017f1098",
+    "packageManager": "npm",
+    "componentType": "webpart"
+  }
+}
