@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "graph-teams-desktop-client-side-solution",
+    "id": "c1a63e22-767d-4565-a2ca-ccd81405dabd",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "webApiPermissionRequests": [{
+      "resource": "Microsoft Graph",
+      "scope": "Group.ReadWrite.All"
+    }]
+  },
+  "paths": {
+    "zippedPackage": "solution/graph-teams-desktop.sppkg"
+  }
+}

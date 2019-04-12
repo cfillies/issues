@@ -1,0 +1,47 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.2/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.2",
+  "packageName": "GraphTeamsDesktop",
+  "id": "5b7b1bee-7cbe-4b80-90dd-cbae4abab506",
+  "version": "0.1",
+  "developer": {
+    "name": "Dev",
+    "websiteUrl": "https://products.office.com/en-us/sharepoint/collaboration",
+    "privacyUrl": "https://privacy.microsoft.com/en-us/privacystatement",
+    "termsOfUseUrl": "https://www.microsoft.com/en-us/servicesagreement"
+  },
+  "name": {
+    "short": "TEAMS_APP_NAME"
+  },
+  "description": {
+    "short": "Graph Teams Desktop",
+    "full": "Graph Teams Desktop"
+  },
+  "icons": {
+    "outline": "5b7b1bee-7cbe-4b80-90dd-cbae4abab506_outline.png",
+    "color": "5b7b1bee-7cbe-4b80-90dd-cbae4abab506_color.png"
+  },
+  "accentColor": "#004578",
+  "configurableTabs": [
+    {
+      "configurationUrl": "https://{teamSiteDomain}{teamSitePath}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest={teamSitePath}/_layouts/15/teamshostedapp.aspx%3FopenPropertyPane=true%26teams%26componentId=5b7b1bee-7cbe-4b80-90dd-cbae4abab506",
+      "canUpdateConfiguration": false,
+      "scopes": [
+        "team"
+      ]
+    }
+  ],
+  "validDomains": [
+    "*.login.microsoftonline.com",
+    "*.sharepoint.com",
+    "*.sharepoint-df.com",
+    "spoppe-a.akamaihd.net",
+    "spoprod-a.akamaihd.net",
+    "resourceseng.blob.core.windows.net",
+    "msft.spoppe.com"
+  ],
+  "webApplicationInfo": {
+    "resource": "https://{teamSiteDomain}",
+    "id": "00000003-0000-0ff1-ce00-000000000000"
+  }
+}
