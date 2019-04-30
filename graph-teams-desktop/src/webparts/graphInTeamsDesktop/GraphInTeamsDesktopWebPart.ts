@@ -10,6 +10,7 @@ import {
 import * as strings from 'GraphInTeamsDesktopWebPartStrings';
 import GraphInTeamsDesktop from './components/GraphInTeamsDesktop';
 import { IGraphInTeamsDesktopProps } from './components/IGraphInTeamsDesktopProps';
+import { MSGraphClient } from '@microsoft/sp-http';
 
 import * as microsoftTeams from '@microsoft/teams-js';
 
@@ -20,8 +21,9 @@ export interface IGraphInTeamsDesktopWebPartProps {
 export default class GraphInTeamsDesktopWebPart extends BaseClientSideWebPart<IGraphInTeamsDesktopWebPartProps> {
 
   private _teamsContext: microsoftTeams.Context;
+  private graphClient: MSGraphClient;
 
-  public onInit(): Promise<any> {
+ /*  public onInit(): Promise<any> {
     let retVal: Promise<any> = Promise.resolve();
     if (this.context.microsoftTeams) {
       retVal = new Promise((resolve) => {
@@ -32,28 +34,35 @@ export default class GraphInTeamsDesktopWebPart extends BaseClientSideWebPart<IG
       });
     }
     return retVal;
-  }
+  } */
 
   public render(): void {
-    this._sendRequest();
-    const element: React.ReactElement<IGraphInTeamsDesktopProps > = React.createElement(
-      GraphInTeamsDesktop,
-      {
-        description: this.properties.description
-      }
-    );
+   // this._sendRequest();
 
-    ReactDom.render(element, this.domElement);
+   this.context.msGraphClientFactory
+    .getClient()
+    .then((client: MSGraphClient): void => {
+      this.graphClient = client;
+    }).then(() => {
+      const element: React.ReactElement<IGraphInTeamsDesktopProps > = React.createElement(
+        GraphInTeamsDesktop,
+        {
+          description: this.properties.description,
+          context: this.context,
+          graphClient: this.graphClient
+        }
+      );
+      ReactDom.render(element, this.domElement);
+    });
   }
-
-  private async _sendRequest() {
+/*    private async _sendRequest() {
     const client = await this.context.msGraphClientFactory.getClient();
     client.api(`groups/${this._teamsContext!.groupId}/members`).version('v1.0').get().then(members => {
       console.log(members);
     }).catch(error => {
       console.log(error);
     });
-  }
+  } */
 
   protected onDispose(): void {
     ReactDom.unmountComponentAtNode(this.domElement);
